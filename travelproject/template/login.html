@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .container {
+          padding: 16px;
+
+          text-align:center;
+           background-color:transparent;
+           margin-left:300px;
+
+        }
+     h1{
+
+           margin-left:400px;
+
+
+           background-color:transparent;
+
+           }
+
+</style>
+<body style="background-image:url('../media/pics/bgimage.jpg');background-repeat:no-repeat;background-size:cover">
+<h1>  LOGIN </h1>
+<div class="container">
+
+    <h1></h1>
+<form action='login' method="post" style="text-align:center;">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td><label>Enter your username</label></td>
+            <td><input type="text" name="username"></td>
+        </tr>
+        <tr>
+            <td><label>Enter your password</label></td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td colspan="2" style="text-align:center"><input type="submit"></td>
+        </tr>
+    </table>
+
+</form>
+{% for msg in messages %}
+  {{msg}}
+  {% endfor %}
+</div>
+</body>
+</html>
